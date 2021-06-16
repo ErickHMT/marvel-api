@@ -43,8 +43,8 @@ public class RequestParamInterceptor implements HandlerInterceptor {
 		
 		if(orderBy != null) {
 			
-			if(!orderBy.equalsIgnoreCase("name") || !orderBy.equalsIgnoreCase("modified") ||
-					!orderBy.equalsIgnoreCase("-name") || !orderBy.equalsIgnoreCase("-modified")) {
+			if(!orderBy.equalsIgnoreCase("name") && !orderBy.equalsIgnoreCase("modified") &&
+					!orderBy.equalsIgnoreCase("-name") && !orderBy.equalsIgnoreCase("-modified")) {
 				sendError(response, 409, ErrorMessage.UNRECOGNIZED_ORDERING_PARAMETER);
 	    		return false;
 			}

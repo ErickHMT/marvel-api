@@ -1,10 +1,9 @@
 package com.api.marvel.model;
 
 import lombok.Data;
-import lombok.Getter;
 
 @Data
-public class CharacterDataWrapper {
+public class DataWrapper {
 
 	private int code;
 	private String status;
@@ -12,9 +11,9 @@ public class CharacterDataWrapper {
 	private String attributionText;
 	private String attributionHTML;
 	private String etag;
-	private CharacterDataContainer data;
+	private DataContainer<?> data;
 	
-	public CharacterDataWrapper(int responseCode, String status, CharacterDataContainer data) {
+	public DataWrapper(int responseCode, String status, DataContainer<?> data) {
 
 		this.code = responseCode;
 		this.status = status;
