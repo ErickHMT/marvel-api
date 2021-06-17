@@ -15,10 +15,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.api.marvel.model.DataContainer;
 import com.api.marvel.repository.CharactersRepository;
 import com.api.marvel.specification.SpecificationCharacters;
 import com.api.marvel.util.MarvelAPIConstantes;
+import com.api.marvel.controller.dto.DataContainer;
 import com.api.marvel.model.Characters;
 
 @Service

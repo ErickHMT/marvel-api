@@ -18,7 +18,7 @@ INSERT INTO STORY_SUMMARY (resource_uri, name, type, id_story) VALUES
 	('http://gateway.marvel.com/v1/public/stories/1602', 'Cover #1412', 'cover', 1),
 	('http://gateway.marvel.com/v1/public/stories/1800', 'Cover #1602', 'cover', 1);
 
-INSERT INTO COMIC (available, collection_uri) values
+INSERT INTO COMIC_LIST (available, collection_uri) values
 	(217, 'http://gateway.marvel.com/v1/public/characters/1010354/stories');
 	
 INSERT INTO COMIC_SUMMARY (resource_uri, name, id_comic) VALUES

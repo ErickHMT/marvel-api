@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.api.marvel.model.DataContainer;
-import com.api.marvel.model.DataWrapper;
+import com.api.marvel.controller.dto.DataContainer;
+import com.api.marvel.controller.dto.DataWrapper;
 import com.api.marvel.controller.dto.ResponseErrorDTO;
 import com.api.marvel.model.Characters;
 import com.api.marvel.service.CharactersService;
@@ -29,8 +29,9 @@ public class CharactersController {
 	@GetMapping
 	public ResponseEntity<?> findByFilter(@RequestParam Map<String,String> params) {
 		
+		// printa todos os parametros informados
 		params.entrySet().forEach(entry -> {
-		    System.out.println(entry.getKey() + " -> " + entry.getValue());
+		    System.out.println(entry.getKey() + "=" + entry.getValue());
 		});
 
 		DataContainer<Characters> data = charactersService.findByFilter(params);
@@ -54,4 +55,31 @@ public class CharactersController {
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 	
+	@GetMapping("/{characterId}/comics")
+	@ResponseBody
+	public ResponseEntity<?> findComics(@PathVariable Long characterId) {
+
+		return ResponseEntity.notFound().build();
+	}
+	
+	@GetMapping("/{characterId}/events")
+	@ResponseBody
+	public ResponseEntity<?> findEvents(@PathVariable Long characterId) {
+
+		return ResponseEntity.notFound().build();
+	}
+	
+	@GetMapping("/{characterId}/series")
+	@ResponseBody
+	public ResponseEntity<?> findSeries(@PathVariable Long characterId) {
+
+		return ResponseEntity.notFound().build();
+	}
+	
+	@GetMapping("/{characterId}/stories")
+	@ResponseBody
+	public ResponseEntity<?> findStories(@PathVariable Long characterId) {
+
+		return ResponseEntity.notFound().build();
+	}
 }

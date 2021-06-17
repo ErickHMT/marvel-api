@@ -1,4 +1,4 @@
-package com.api.marvel.model;
+package com.api.marvel.controller.dto;
 
 import java.util.List;
 

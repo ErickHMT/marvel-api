@@ -32,7 +32,7 @@ public class ComicSummary {
 	@ManyToOne
 	@JoinColumn(name = "ID_COMIC")
     @JsonBackReference
-    private Comic comic;
+    private ComicList comic;
 	
 	
 }

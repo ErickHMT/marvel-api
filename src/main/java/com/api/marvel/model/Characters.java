@@ -37,7 +37,7 @@ public class Characters {
     
     @ManyToOne
     @JoinColumn(name = "ID_COMIC")
-	private Comic comics;
+	private ComicList comics;
     
     @ManyToOne
     @JoinColumn(name = "ID_SERIE")
