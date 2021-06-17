@@ -24,6 +24,8 @@ Foi decidido utilizar a base de dados H2 em memória pela praticidade, em um amb
 Quando a aplicação for executada será automaticamente executado um script com as informações para a população da base, que está presente em resources/data.sql, 
 você pode acessar uma interface para a manipulação dessa base no * `/v1/public/h2-console`.
 
+![image](https://user-images.githubusercontent.com/19320921/122404813-eb31a080-cf55-11eb-820e-7632c564e5e9.png)
+
 ## Executar a aplicação localmente
 
 Há diversas maneiras de se executar uma aplicação Spring Boot localmente. Uma delas é executando o método `main` em `com.api.marvel.MarvelApplication` a partir da sua IDE.
