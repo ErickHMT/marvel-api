@@ -34,7 +34,8 @@ INSERT INTO SERIE_SUMMARY (resource_uri, name, id_serie) VALUES
 	('http://gateway.marvel.com/v1/public/series/22778', 'All-New Guardians of the Galaxy Vol. 3: Infinity Quest (2018)', 1);
 	
 INSERT INTO CHARACTERS (name, description, modified, resourceURI, id_thumbnail, id_comic, id_serie, id_story, id_event) VALUES 
-	('3-D Man', 'Some random description', '2021-06-16T06:10:16.806164', 'http://gateway.marvel.com/v1/public/characters/1011334', 1, 1, 1, 1, 1),
+	('Hulk', 'Some random description', '2021-06-16T06:10:16.806164', 'http://gateway.marvel.com/v1/public/characters/1011334', 1, 1, 1, 1, 1),
+	('Capitain America', 'Teste teste', '2021-06-16T06:10:16.806164', 'http://gateway.marvel.com/v1/public/characters/1011334', 1, 1, 1, 1, 1),
 	('Adam Warlock', 'Adam Warlock is an artificially created human who was born in a cocoon at a scientific complex called The Beehive.', '2021-06-16T06:10:16.806164', 'http://gateway.marvel.com/v1/public/characters/1010354', 1, 1, 1, 1, 1);
 	
 INSERT INTO URL (type, url, id_characters) VALUES

@@ -1,8 +1,5 @@
 package com.api.marvel.controller;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Collections;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;

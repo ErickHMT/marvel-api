@@ -7,6 +7,10 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import com.api.marvel.util.ErrorMessage;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,6 +29,7 @@ public class RequestParamInterceptor implements HandlerInterceptor {
     
     	String limit = request.getParameter("limit");
     	String orderBy = request.getParameter("orderBy");
+    	String modifiedSince = request.getParameter("modifiedSince");
     	
     	if(limit != null && !isNumeric(limit)) {
     		sendError(response, 409, ErrorMessage.LIMIT_GREATHER_THAN_0);
@@ -49,6 +54,11 @@ public class RequestParamInterceptor implements HandlerInterceptor {
 	    		return false;
 			}
 		}
+		
+		if(modifiedSince != null && !isDate(modifiedSince)) {
+			sendError(response, 409, ErrorMessage.INVALID_DATE_FORMAT);
+			return false;
+		}
     	
         return true;
     }
@@ -63,6 +73,15 @@ public class RequestParamInterceptor implements HandlerInterceptor {
     		  Integer.parseInt(str);  
     		  return true;
     	} catch(NumberFormatException e){  
+    		return false;  
+    	}  
+    }
+    
+    public static boolean isDate(String str) { 
+    	try {  
+			LocalDate.parse(str, DateTimeFormatter.ofPattern("yyyy-MM-dd"));  
+			return true;
+    	} catch(DateTimeParseException e){  
     		return false;  
     	}  
     }
