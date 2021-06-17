@@ -31,7 +31,15 @@ public class Characters {
     
     @ManyToOne
     @JoinColumn(name = "ID_COMIC")
-	private Comic comic;
+	private Comic comics;
+    
+    @ManyToOne
+    @JoinColumn(name = "ID_SERIE")
+	private Serie series;
+    
+    @ManyToOne
+    @JoinColumn(name = "ID_STORY")
+	private Story stories;
 	
 	
 }

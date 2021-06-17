@@ -16,8 +16,8 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "COMIC_SUMMARY")
-public class ComicSummary {
+@Table(name = "SERIE_SUMMARY")
+public class SerieSummary {
 
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,9 +30,9 @@ public class ComicSummary {
 	private String name;
 	
 	@ManyToOne
-	@JoinColumn(name = "ID_COMIC")
+	@JoinColumn(name = "ID_SERIE")
     @JsonBackReference
-    private Comic comic;
+    private Serie serie;
 	
 	
 }
